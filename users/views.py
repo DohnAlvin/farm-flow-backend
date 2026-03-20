@@ -17,5 +17,5 @@ class RegisterView(generics.CreateAPIView):
 # Google Login View
 class GoogleLogin(SocialLoginView):
     adapter_class = GoogleOAuth2Adapter
-    callback_url = "http://127.0.0.1:8000/"  # Note: Update this later to match your frontend URL (e.g., http://localhost:3000)
+    callback_url = "https://farmflow-api-s521.onrender.com"  # Note: Update this later to match your frontend URL (e.g., http://localhost:3000)
     client_class = OAuth2Client
