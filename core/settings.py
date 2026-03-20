@@ -122,11 +122,13 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:5173",
     "https://farm-flow-frontend-five.vercel.app",  
+    "https://farm-flow-frontend-au41c7pde-dohnalvins-projects.vercel.app", # 🚨 The specific Vercel URL!
 ]
 
 # Tell Django to trust Vercel for form submissions (CSRF)
 CSRF_TRUSTED_ORIGINS = [
     "https://farm-flow-frontend-five.vercel.app",
+    "https://farm-flow-frontend-au41c7pde-dohnalvins-projects.vercel.app", # 🚨 Added here too!
 ]
 
 AUTH_USER_MODEL = 'users.User'
