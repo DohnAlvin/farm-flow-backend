@@ -167,8 +167,8 @@ SOCIALACCOUNT_PROVIDERS = {
 
 # --- ALLAUTH UPDATED SETTINGS ---
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_LOGIN_METHODS = {'email'}
-ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+ACCOUNT_AUTHENTICATION_METHOD = 'email'  # 🚨 Explicitly tell allauth to login via email
+ACCOUNT_USERNAME_REQUIRED = False        # 🚨 Tell allauth to stop asking for a username
 
 # --- THE FIX FOR THE CUSTOM USER MODEL ---
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
