@@ -167,8 +167,9 @@ SOCIALACCOUNT_PROVIDERS = {
 
 # --- ALLAUTH UPDATED SETTINGS ---
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_AUTHENTICATION_METHOD = 'email'  # 🚨 Explicitly tell allauth to login via email
-ACCOUNT_USERNAME_REQUIRED = False        # 🚨 Tell allauth to stop asking for a username
+ACCOUNT_LOGIN_METHODS = {'email'}
+ACCOUNT_SIGNUP_FIELDS = []  # Let dj-rest-auth handle the passwords
+ACCOUNT_EMAIL_REQUIRED = True
 
 # --- THE FIX FOR THE CUSTOM USER MODEL ---
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
@@ -183,6 +184,7 @@ REST_AUTH = {
 }
 
 REST_USE_JWT = True
+
 # 🚨 CRITICAL FOR VERCEL + RENDER COOKIE SHARING
 CSRF_COOKIE_SAMESITE = 'None'
 CSRF_COOKIE_SECURE = True
