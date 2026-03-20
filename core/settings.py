@@ -115,12 +115,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # --- CUSTOM FARM SYSTEM CONFIGURATIONS ---
 
-# 🛡️ CORS SECURITY FIX: Replaced ALLOW_ALL with a strict VIP list
+# 🛡️ CORS SECURITY FIX
 CORS_ALLOW_ALL_ORIGINS = False 
+CORS_ALLOW_CREDENTIALS = True  # 🚨 Added this! Crucial for authentication/JWTs
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:5173",
-    "https://farm-flow-frontend-five.vercel.app",  # ✅ Your live Vercel URL
+    "https://farm-flow-frontend-five.vercel.app",  
 ]
 
 # Tell Django to trust Vercel for form submissions (CSRF)
