@@ -167,13 +167,13 @@ SOCIALACCOUNT_PROVIDERS = {
 
 # --- ALLAUTH UPDATED SETTINGS ---
 # --- ALLAUTH UPDATED SETTINGS ---
+# --- ALLAUTH UPDATED SETTINGS ---
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_LOGIN_METHODS = {'email'}
-ACCOUNT_AUTHENTICATION_METHOD = 'email'  # 🚨 Added back because dj-rest-auth needs it
-ACCOUNT_USERNAME_REQUIRED = False        # 🚨 Added back because dj-rest-auth needs it!
-ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*'] 
-ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_EMAIL_REQUIRED = True          # 🚨 Added back to satisfy v0.63!
 ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
 SOCIALACCOUNT_EMAIL_AUTHENTICATION_AUTO_CONNECT = True
 # Tell dj-rest-auth to use SimpleJWT instead of basic tokens
 REST_AUTH = {
