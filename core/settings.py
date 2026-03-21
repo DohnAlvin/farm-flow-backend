@@ -171,7 +171,7 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_USER_MODEL_USERNAME_FIELD = 'username'  # 🚨 This is the magic key! Changed from None to 'username'
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None  
 SOCIALACCOUNT_EMAIL_AUTHENTICATION_AUTO_CONNECT = True
 # Tell dj-rest-auth to use SimpleJWT instead of basic tokens
 REST_AUTH = {
