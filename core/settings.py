@@ -116,7 +116,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # --- CUSTOM FARM SYSTEM CONFIGURATIONS ---
 
 # 🛡️ CORS SECURITY FIX
-CORS_ALLOW_ALL_ORIGINS = False 
+CORS_ALLOW_ALL_ORIGINS = True 
 CORS_ALLOW_CREDENTIALS = True  # 🚨 Added this! Crucial for authentication/JWTs
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
@@ -173,6 +173,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None  
 SOCIALACCOUNT_EMAIL_AUTHENTICATION_AUTO_CONNECT = True
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Tell dj-rest-auth to use SimpleJWT instead of basic tokens
 REST_AUTH = {
     'USE_JWT': True,
